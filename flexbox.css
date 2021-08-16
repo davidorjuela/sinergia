@@ -1,0 +1,63 @@
+/************************DIRECTION DEFAULT(ROW)**************************/
+.flexRow{
+    display:flex;
+}
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+}
+/************************WRAP DEFAULT(NO-WRAP)**************************/
+.wrap{
+  flex-wrap: wrap;
+}
+/****************JUSTIFY-CONTENT DEFAULT(START)*****************/
+.jCEnd{
+  justify-content: flex-end;
+}
+.jCCenter{
+  justify-content: center;
+}
+.jCBetween{
+  justify-content: space-between;
+}
+.jCAround{
+  justify-content: space-around;
+}
+.jCEvenly{
+  justify-content: evenly;
+}
+/****************ALIGN ITEMS DEFAULT(STRETCH)*****************/
+.aIStart{
+  align-items: flex-start;
+}
+.aICenter{
+  align-items: center;
+}
+.aIEnd{
+  align-items: flex-end;
+}
+.aIBaseline{
+  align-items: baseline;
+}
+.aIStretch{
+  align-items: stretch;
+}
+/****************ALIGN-CONTENT DEFAULT(STRETCH)*****************/
+.aCStart{
+  align-content: flex-start;
+}
+.aCCenter{
+  align-content: center;
+}
+.aCEnd{
+  align-content: flex-end;
+}
+.aCBaseline{
+  align-content: baseline;
+}
+.aCAround{
+  align-content: space-around;
+}
+.aCBetween{
+  align-content: space-between;
+}

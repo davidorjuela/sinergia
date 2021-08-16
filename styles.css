@@ -1,0 +1,298 @@
+*{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root {
+    font-size: 3.5vmin;
+    --color1: #772432;
+    --color2: #004165;
+    --color3: #A9B2B1;
+    --color4: #F2DF74;
+    --color5: #070523;
+    --color6: #FFFFFF;
+}
+.container{
+    overflow: hidden;
+}
+/**********************************/
+html{
+    height: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+body::before {
+    content: "";
+    background-image: url("./images/fondo.png");
+    background-size: contain;
+    background-attachment: fixed;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.2;
+    z-index: -1;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+header{
+    background-color: var(--color2);
+    border-bottom: 2px solid var(--color4);
+    outline: 2px solid var(--color1);
+}
+main{
+    color: var(--color5);
+    height: 100%;
+    margin: 2px auto;
+    max-width: 1200px;
+}
+footer{
+    background-color: var(--color2);
+    color: var(--color6);
+    font-size: 0.9rem;
+
+}
+#logo{
+    padding: 1rem;
+    width: 100%;
+}
+#logo img{
+    width: 7rem;
+}
+#titulo{
+    font-family: 'Montserrat', sans-serif;
+    padding: 1rem;
+    background-color: var(--color6);
+    width: 100%;
+}
+#titulo h1{
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: var(--color1);
+    text-shadow: 0 0 .3rem var(--color4);
+    text-align: center;
+    line-height: 90%;
+}
+#titulo h2{
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: var(--color2);
+    text-align: center;
+}
+#titulo h5{
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--color1);
+    text-align: center;
+}
+#menu-button{
+    background-color: var(--color3);
+    width: 100%;
+    text-align: center;
+}
+/******************************/
+#contacto, #politicas{
+    margin: .5rem;
+    width: 100%;
+}
+#whatsapp, #email, #politicas>div{
+    margin: .1rem;
+    padding: .1rem;
+}
+#whatsapp img{
+    width: .9rem;
+    height: .9rem;
+    margin-right: .4rem;
+}
+#direccion>p:first-child, #politicas p:first-child{
+    margin-right: .2rem;
+}
+#wiserclick {
+    font-size: 0.8rem;
+}
+#wiserclick a{
+    text-decoration: none;
+    color: var(--color4);
+}
+/******************************/
+nav{
+    background-color: var(--color3);
+    min-width: 12rem;
+    min-height: 100%;
+    margin: 1rem 1rem 1rem 0;
+    left: -500px;
+    z-index: 2;
+    display: none;
+}
+#menu-close{
+    text-align: right;
+    padding: .2rem .5rem;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    padding: .5rem 1rem;
+    border-radius: 3px;
+    border: 1px solid var(--color5);
+    background-color: var(--color2);
+    color: var(--color6);
+    margin: .2rem;
+}
+nav ul li:hover{
+    padding: .5rem 1rem;
+    border-radius: 3px;
+    border: 1px solid var(--color5);
+    background-color: var(--color2);
+    color: var(--color4);
+    margin: .2rem 0;
+}
+/*******************************/
+#contenido{
+    height: 100%;
+    width: 100%;
+}
+#contenido img{
+    width: 100%;
+    max-width: 800px;
+    margin: 1rem auto;
+}
+/*******************************/
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+    :root {
+        font-size: 3.3vmin;
+    }
+    #titulo, #logo{
+        width: 50%;
+    }
+    #titulo h1, #titulo h2, #titulo h5{
+        align-self: flex-start;
+    }
+    #logo {
+        justify-content: flex-end;
+    }
+    #productos-content{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #contacto{
+        order: 3;
+        width: unset;
+    }
+    #politicas{
+        width: unset;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    :root {
+        font-size: 3.2vmin;
+    }
+    #titulo, #logo{
+        width: 50%;
+    }
+    #titulo h1, #titulo h2, #titulo h5{
+        align-self: flex-start;
+    }
+    #logo {
+        justify-content: flex-end;
+    }
+    #content>div:first-child{
+        justify-content: center;
+    }
+    #productos-content{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    #contacto{
+        order: 3;
+        width: unset;
+    }
+    #politicas{
+        width: unset;
+    }
+    nav{
+        display: inline !important;
+    }
+    #menu-button, #menu-close{
+        display: none;
+    }
+}
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+    :root {
+        font-size: 3vmin;
+    }
+    #titulo, #logo{
+        width: 50%;
+    }
+    #titulo h1, #titulo h2, #titulo h5{
+        align-self: flex-start;
+    }
+    #logo {
+        justify-content: flex-end;
+    }
+    #content>div:first-child{
+        justify-content: center;
+    }
+    #productos-content{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #contacto{
+        order: 3;
+        width: unset;
+    }
+    #politicas{
+        width: unset;
+    }
+    nav{
+        display: inline !important;
+    }
+    #menu-button, #menu-close{
+        display: none;
+    }
+}
+@media only screen and (min-width: 1201px){
+    :root {
+        font-size: 3vmin;
+    }
+    #titulo, #logo{
+        width: 50%;
+    }
+    #titulo h1, #titulo h2, #titulo h5{
+        align-self: flex-start;
+    }
+    #logo {
+        justify-content: flex-end;
+    }
+    #content>div:first-child{
+        justify-content: center;
+    }
+    #productos-content{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    #contacto{
+        order: 3;
+        width: unset;
+    }
+    #politicas{
+        width: unset;
+    }
+    nav{
+        display: inline !important;
+    }
+    #menu-button, #menu-close{
+        display: none;
+    }
+    /*
+    nav{
+        position: relative;
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+    }
+    #menu-button, #close-nav{
+        display: none;
+    }
+    */
+}
