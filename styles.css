@@ -53,7 +53,7 @@ main{
 footer{
     background-color: var(--color2);
     color: var(--color6);
-    font-size: 0.9rem;
+    font-size: 1rem;
 
 }
 #logo{
@@ -112,7 +112,7 @@ footer{
     margin-right: .2rem;
 }
 #wiserclick {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 #wiserclick a{
     text-decoration: none;
@@ -120,6 +120,7 @@ footer{
 }
 /******************************/
 nav{
+    font-size: 1.1rem;
     background-color: var(--color3);
     min-width: 12rem;
     min-height: 100%;
@@ -134,7 +135,7 @@ nav{
 #menu-close{
     text-align: right;
     padding: .2rem .5rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 nav ul{
     list-style: none;
