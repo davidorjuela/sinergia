@@ -10,4 +10,22 @@ window.onload = function (){
     menu_close.addEventListener('click', () => {
         menu.style.display="none";
     });
+
+    const dias = document.getElementById("dias");
+    const horas = document.getElementById("horas");
+    const minutos = document.getElementById("minutos");
+    let sesion = moment('2021-08-19T19:45:00-05:00');
+
+    const myInterval = setInterval(() => {
+        let now = moment();
+        let min = sesion.diff(now,'m');
+        let hor = Math.trunc(min/60);
+        let dia = Math.trunc(hor/24);
+        hor = hor-dia*24;
+        min=min-hor*60-dia*24*60;
+        dias.innerHTML=dia;
+        dia<10? horas.innerHTML='0'+hor : horas.innerHTML=hor;
+        min<10? minutos.innerHTML='0'+min : minutos.innerHTML=min;
+
+    }, 1000);
 }

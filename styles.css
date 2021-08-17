@@ -131,6 +131,7 @@ nav{
 #menu-close{
     text-align: right;
     padding: .2rem .5rem;
+    font-size: 1.2rem;
 }
 nav ul{
     list-style: none;
@@ -152,6 +153,21 @@ nav ul li:hover{
     margin: .2rem 0;
 }
 /*******************************/
+#cuenta_regresiva{
+    background-color: var(--color4);
+    color: var(--color1);
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    width: 100%;
+}
+#zoom{
+    text-decoration: none;
+    padding: 0 1rem;
+    color: var(--color6);
+    background-color: var(--color2);
+}
 #contenido{
     height: 100%;
     width: 100%;
