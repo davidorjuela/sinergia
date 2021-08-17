@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 :root {
-    font-size: 3.7vmin;
+    font-size: 4vmin;
     --color1: #772432;
     --color2: #004165;
     --color3: #A9B2B1;
@@ -124,9 +124,12 @@ nav{
     min-width: 12rem;
     min-height: 100%;
     margin: 1rem 1rem 1rem 0;
-    left: -500px;
+    margin-top: 0;
+    position: fixed;
+    top: 0px;
+    left: -12.5rem;
     z-index: 2;
-    display: none;
+    transition: all 700ms ease;
 }
 #menu-close{
     text-align: right;
@@ -180,7 +183,7 @@ nav ul li:hover{
 /*******************************/
 @media only screen and (min-width: 577px) and (max-width: 767px) {
     :root {
-        font-size: 3.5vmin;
+        font-size: 3.8vmin;
     }
     #titulo, #logo{
         width: 50%;
@@ -204,7 +207,7 @@ nav ul li:hover{
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
     :root {
-        font-size: 3.3vmin;
+        font-size: 3.6vmin;
     }
     #titulo, #logo{
         width: 50%;
@@ -230,6 +233,8 @@ nav ul li:hover{
     }
     nav{
         display: inline !important;
+        position: static;
+        margin-top: 1rem;
     }
     #menu-button, #menu-close{
         display: none;
@@ -237,7 +242,7 @@ nav ul li:hover{
 }
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
     :root {
-        font-size: 3.1vmin;
+        font-size: 3.4vmin;
     }
     #titulo, #logo{
         width: 50%;
@@ -263,6 +268,8 @@ nav ul li:hover{
     }
     nav{
         display: inline !important;
+        position: static;
+        margin-top: 1rem;
     }
     #menu-button, #menu-close{
         display: none;
@@ -270,7 +277,7 @@ nav ul li:hover{
 }
 @media only screen and (min-width: 1201px){
     :root {
-        font-size: 3vmin;
+        font-size: 3.2vmin;
     }
     #titulo, #logo{
         width: 50%;
@@ -296,6 +303,8 @@ nav ul li:hover{
     }
     nav{
         display: inline !important;
+        position: static;
+        margin-top: 1rem;
     }
     #menu-button, #menu-close{
         display: none;

@@ -4,11 +4,11 @@ window.onload = function (){
     const menu = document.getElementsByTagName("nav")[0];
 
     menu_open.addEventListener('click', () => {
-        menu.style.display="inline";
+        menu.style.left="0";
     });
 
     menu_close.addEventListener('click', () => {
-        menu.style.display="none";
+        menu.style.left="-12rem";
     });
 
     const dias = document.getElementById("dias");
@@ -24,7 +24,7 @@ window.onload = function (){
         hor = hor-dia*24;
         min=min-hor*60-dia*24*60;
         dias.innerHTML=dia;
-        dia<10? horas.innerHTML='0'+hor : horas.innerHTML=hor;
+        hor<10? horas.innerHTML='0'+hor : horas.innerHTML=hor;
         min<10? minutos.innerHTML='0'+min : minutos.innerHTML=min;
 
     }, 1000);
