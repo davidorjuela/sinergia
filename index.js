@@ -14,7 +14,14 @@ window.onload = function (){
     const dias = document.getElementById("dias");
     const horas = document.getElementById("horas");
     const minutos = document.getElementById("minutos");
-    let sesion = moment('2021-08-19T19:45:00-05:00');
+    let sessionDay = 4;//===>Jueves
+    if(moment().day()>sessionDay) sessionDay += 7;
+    const sessionHour = "19:45:00";//===>7:45PM
+    const nextDay= moment().day(sessionDay)._d.toISOString().substring(0,10);
+    console.log('====================================');
+    console.log(nextDay);
+    console.log('====================================');
+    let sesion = moment(`${nextDay}T${sessionHour}-05:00`);
 
     const myInterval = setInterval(() => {
         let now = moment();
