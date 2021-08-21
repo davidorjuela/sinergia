@@ -44,9 +44,89 @@ window.onload = function (){
         const endDateTime = "20200403T180000";
         const datetime = "Friday, 3rd April 2020, 5pm";
         const location = "XXX street";
-        const icsMSG = 'BEGIN:VCALENDAR\nPRODID:-//Microsoft Corporation//Outlook 16.0 MIMEDIR//EN\nVERSION:2.0\nMETHOD:REQUEST\nX-MS-OLK-FORCEINSPECTOROPEN:TRUE\nBEGIN:VEVENT\nDESCRIPTION:When: ' + datetime + ';Where: ' + location + '\nDTSTART;TZID="China/Beijing":' + startDateTime + '\nDTEND;TZID="China/Beijing":' + endDateTime + '\nLOCATION:' + location + '\nSUMMARY;LANGUAGE=en-sg:You have a appointment\nX-MICROSOFT-CDO-BUSYSTATUS:TENTATIVE\nX-MICROSOFT-CDO-IMPORTANCE:1\nX-MICROSOFT-CDO-INTENDEDSTATUS:BUSY\nX-MICROSOFT-DISALLOW-COUNTER:FALSE\nX-MS-OLK-CONFTYPE:0\nBEGIN:VALARM\nTRIGGER:-PT15M\nACTION:DISPLAY\nDESCRIPTION:Reminder\nEND:VALARM\nEND:VEVENT\nEND:VCALENDAR\n';
+        const icsMSG = 
+`BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:david.orjuela@clubsinergia.org-wiserclick® 
+CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:America/Bogota
+LAST-MODIFIED:20201011T015911Z
+TZURL:http://tzurl.org/zoneinfo-outlook/America/Bogota
+X-LIC-LOCATION:America/Bogota
+BEGIN:STANDARD
+TZNAME:-05
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0500
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20210821T165211Z
+UID:20210821T165211Z-www.clubsinergia.org
+DTSTART;TZID=America/Bogota:20210826T194500
+RRULE:FREQ=WEEKLY;BYDAY=TH
+DTEND;TZID=America/Bogota:20210826T211500
+SUMMARY:Sesión del Club Toastmasters Sinergia. Oratoria y liderazgo.
+URL:https://us02web.zoom.us/j/82139677240
+DESCRIPTION:Club Toastmasters Sinergia, donde los líderes se hacen.
+LOCATION:Bogotá- Colombia
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Sesión Club Toastmasters Sinergia
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+END:VCALENDAR`;
+console.log('====================================');
+console.log(icsMSG);
+console.log('====================================');
         return icsMSG;
     /**
+     * 
+     * 
+     * 
+     * 
+     *
+     
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:david.orjuela@clubsinergia.org-wiserclick® 
+CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:America/Bogota
+LAST-MODIFIED:20201011T015911Z
+TZURL:http://tzurl.org/zoneinfo-outlook/America/Bogota
+X-LIC-LOCATION:America/Bogota
+BEGIN:STANDARD
+TZNAME:-05
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0500
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20210821T165211Z
+UID:20210821T165211Z-www.clubsinergia.org
+DTSTART;TZID=America/Bogota:20210826T194500
+RRULE:FREQ=WEEKLY;BYDAY=TH
+DTEND;TZID=America/Bogota:20210826T211500
+SUMMARY:Sesión del Club Toastmasters Sinergia. Oratoria y liderazgo.
+URL:https://us02web.zoom.us/j/82139677240
+DESCRIPTION:Club Toastmasters Sinergia, donde los líderes se hacen.
+LOCATION:Bogotá- Colombia
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Sesión Club Toastmasters Sinergia
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+END:VCALENDAR
+
+**
+
+
+
     BEGIN:VCALENDAR
     PRODID:-//Microsoft Corporation//Outlook 16.0 MIMEDIR//EN
     VERSION:2.0
