@@ -67,13 +67,13 @@ UID:20210821T165211Z-www.clubsinergia.org
 DTSTART;TZID=America/Bogota:20210826T194500
 RRULE:FREQ=WEEKLY;BYDAY=TH
 DTEND;TZID=America/Bogota:20210826T211500
-SUMMARY:Sesión del Club Toastmasters Sinergia. Oratoria y liderazgo.
+SUMMARY;LANGUAGE=es-ES:Sesión del Club Toastmasters Sinergia. Oratoria y liderazgo.
 URL:https://us02web.zoom.us/j/82139677240
-DESCRIPTION:Club Toastmasters Sinergia, donde los líderes se hacen.
-LOCATION:Bogotá- Colombia
+DESCRIPTION;LANGUAGE=es-ES:Club Toastmasters Sinergia, donde los líderes se hacen.
+LOCATION;LANGUAGE=es-ES:Bogotá- Colombia
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Sesión Club Toastmasters Sinergia
+DESCRIPTION;LANGUAGE=es-ES:Sesión del Club Toastmasters Sinergia
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
