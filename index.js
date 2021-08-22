@@ -14,8 +14,8 @@ window.onload = function (){
     const dias = document.getElementById("dias");
     const horas = document.getElementById("horas");
     const minutos = document.getElementById("minutos");
-    let sessionDay = 6;//===>Jueves
-    const sessionHour = "10:30:00";//===>7:45PM
+    let sessionDay = 4;//===>Jueves
+    const sessionHour = "19:45:00";//===>7:45PM
 
     if(moment().day()>sessionDay) sessionDay += 7;
     let nextDay= moment().day(sessionDay)._d.toISOString().substring(0,10);
@@ -44,10 +44,10 @@ window.onload = function (){
         const endDateTime = "20200403T180000";
         const datetime = "Friday, 3rd April 2020, 5pm";
         const location = "XXX street";
-        const icsMSG = 
+        const icsMSG =
 `BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:david.orjuela@clubsinergia.org-wiserclick® 
+PRODID:david.orjuela@clubsinergia.org-wiserclick®
 CALSCALE:GREGORIAN
 BEGIN:VTIMEZONE
 TZID:America/Bogota
@@ -63,7 +63,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 DTSTAMP:20210821T165211Z
-UID:20210821T165211Z-www.clubsinergia.org
+UID:${moment()}-www.clubsinergia.org
 DTSTART;TZID=America/Bogota:20210826T194500
 RRULE:FREQ=WEEKLY;BYDAY=TH
 DTEND;TZID=America/Bogota:20210826T211500
