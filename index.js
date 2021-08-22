@@ -40,10 +40,6 @@ window.onload = function (){
 
 
     const getCalenderFile = () => {
-        const startDateTime = "20200403T170000";
-        const endDateTime = "20200403T180000";
-        const datetime = "Friday, 3rd April 2020, 5pm";
-        const location = "XXX street";
         const icsMSG =
 `BEGIN:VCALENDAR
 VERSION:2.0
@@ -63,7 +59,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 DTSTAMP:20210821T165211Z
-UID:${moment()}-www.clubsinergia.org
+UID:${moment()._d.toISOString()}-www.clubsinergia.org
 DTSTART;TZID=America/Bogota:20210826T194500
 RRULE:FREQ=WEEKLY;BYDAY=TH
 DTEND;TZID=America/Bogota:20210826T211500
@@ -80,54 +76,10 @@ TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
 END:VCALENDAR`;
-console.log('====================================');
-console.log(icsMSG);
-console.log('====================================');
         return icsMSG;
-    /**
-     * 
-     * 
-     * 
-     * 
-     *
-     
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:david.orjuela@clubsinergia.org-wiserclick® 
-CALSCALE:GREGORIAN
-BEGIN:VTIMEZONE
-TZID:America/Bogota
-LAST-MODIFIED:20201011T015911Z
-TZURL:http://tzurl.org/zoneinfo-outlook/America/Bogota
-X-LIC-LOCATION:America/Bogota
-BEGIN:STANDARD
-TZNAME:-05
-TZOFFSETFROM:-0500
-TZOFFSETTO:-0500
-DTSTART:19700101T000000
-END:STANDARD
-END:VTIMEZONE
-BEGIN:VEVENT
-DTSTAMP:20210821T165211Z
-UID:20210821T165211Z-www.clubsinergia.org
-DTSTART;TZID=America/Bogota:20210826T194500
-RRULE:FREQ=WEEKLY;BYDAY=TH
-DTEND;TZID=America/Bogota:20210826T211500
-SUMMARY:Sesión del Club Toastmasters Sinergia. Oratoria y liderazgo.
-URL:https://us02web.zoom.us/j/82139677240
-DESCRIPTION:Club Toastmasters Sinergia, donde los líderes se hacen.
-LOCATION:Bogotá- Colombia
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Sesión Club Toastmasters Sinergia
-TRIGGER:-PT15M
-END:VALARM
-END:VEVENT
-END:VCALENDAR
-
-**
 
 
+/*
 
     BEGIN:VCALENDAR
     PRODID:-//Microsoft Corporation//Outlook 16.0 MIMEDIR//EN
@@ -154,9 +106,9 @@ END:VCALENDAR
     END:VCALENDAR
     */
     };
-    const recordatorio =document.getElementById("politicas");
+    const recordatorio =document.getElementById("recordatorio");
     recordatorio.addEventListener('click',() => {
-        window.open('data:text/calendar;charset=utf8,' + escape(getCalenderFile()));
+        window.open('data:text/calendar;charset=utf-8,' + getCalenderFile());
     });
 }
 
