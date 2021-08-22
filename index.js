@@ -80,7 +80,7 @@ END:VCALENDAR`;
     };
     const recordatorio =document.getElementById("recordatorio");
     recordatorio.addEventListener('click',() => {
-        window.open('data:text/calendar;charset=utf-8,' + escape(getCalenderFile()), '_blank');
+        window.open('data:text/calendar;charset=utf-8,' + getCalenderFile());
     });
 }
 
