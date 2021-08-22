@@ -162,15 +162,24 @@ nav ul li:hover{
     color: var(--color1);
     font-size: 1.2rem;
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 1rem  0 1rem;
     margin: 1rem;
     width: 100%;
 }
-#zoom{
+#cuenta_regresiva h2{
+    font-size: 1.5rem;
+}
+#cuenta{
+    margin: 1rem 0;
+}
+#zoom, #recordatorio{
     text-decoration: none;
     padding: 0 1rem;
     color: var(--color6);
     background-color: var(--color2);
+    cursor: pointer;
+    min-width: 49% ;
+    margin-bottom: 1rem;
 }
 #contenido{
     height: 100%;

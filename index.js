@@ -77,38 +77,10 @@ END:VALARM
 END:VEVENT
 END:VCALENDAR`;
         return icsMSG;
-
-
-/*
-
-    BEGIN:VCALENDAR
-    PRODID:-//Microsoft Corporation//Outlook 16.0 MIMEDIR//EN
-    VERSION:2.0
-    METHOD:REQUEST
-    X-MS-OLK-FORCEINSPECTOROPEN:TRUE
-    BEGIN:VEVENT
-    DESCRIPTION:When: Friday, 3rd April 2020, 5pm;Where: XXX street
-    DTSTART;TZID="China/Beijing":20200403T170000
-    DTEND;TZID="Australia/Sydney":20200403T180000
-    LOCATION:XXX street
-    SUMMARY;LANGUAGE=en-sg:You have a appointment
-    X-MICROSOFT-CDO-BUSYSTATUS:TENTATIVE
-    X-MICROSOFT-CDO-IMPORTANCE:1
-    X-MICROSOFT-CDO-INTENDEDSTATUS:BUSY
-    X-MICROSOFT-DISALLOW-COUNTER:FALSE
-    X-MS-OLK-CONFTYPE:0
-    BEGIN:VALARM
-    TRIGGER:-PT15M
-    ACTION:DISPLAY
-    DESCRIPTION:Reminder
-    END:VALARM
-    END:VEVENT
-    END:VCALENDAR
-    */
     };
     const recordatorio =document.getElementById("recordatorio");
     recordatorio.addEventListener('click',() => {
-        window.open('data:text/calendar;charset=utf-8,' + getCalenderFile());
+        window.open('data:text/calendar;charset=utf-8,' + escape(getCalenderFile()), '_blank');
     });
 }
 
