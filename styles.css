@@ -103,10 +103,19 @@ footer{
     margin: .1rem;
     padding: .1rem;
 }
-#whatsapp img{
-    width: .9rem;
+#whatsapp a{
+    text-decoration: none;
+    color: var(--color6);
+}
+#whatsapp a::before{
+    content: "";
+    background-image:url("./images/whatsapp.png");
+    background-size: 100% 100%;
+    display: inline-block;
     height: .9rem;
-    margin-right: .4rem;
+    width:.9rem;
+    margin-right: .3rem;
+    vertical-align: middle;
 }
 #direccion>p:first-child, #politicas p:first-child{
     margin-right: .2rem;
