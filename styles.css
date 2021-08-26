@@ -103,7 +103,7 @@ footer{
     margin: .1rem;
     padding: .1rem;
 }
-#whatsapp a{
+#whatsapp a, #email a{
     text-decoration: none;
     color: var(--color6);
 }
