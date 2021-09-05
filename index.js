@@ -82,5 +82,42 @@ END:VCALENDAR`;
     recordatorio.addEventListener('click',() => {
         window.open('data:text/calendar;charset=utf-8,' + getCalenderFile());
     });
+
+    //Pestañas
+    function easyTabs() {
+        var tabs = document.querySelectorAll('.tab');
+        var secciones = document.querySelectorAll('section');
+
+        for (t = 0; t < tabs.length; t++) {
+            tabs[t].setAttribute("index", t+1);
+            if (t == 0) tabs[t].className = "tab selected";
+            }
+
+        for (c = 0; c < secciones.length; c++) {
+            secciones[c].setAttribute("index", c+1);
+            secciones[c].style.display="none";
+            if (c == 0) secciones[c].style.display="flex";
+            }
+
+        for (i = 0; i < tabs.length; i++) {
+            tabs[i].onclick = function() {
+                menu.style.left="-12rem";
+                var tSiblings = this.parentElement.children;
+                for (i = 0; i < tSiblings.length; i++) {
+                    tSiblings[i].className = "tab";
+                }
+                this.className = "tab selected";
+                var idx = this.getAttribute("index");
+
+                for (i = 0; i < secciones.length; i++) {
+                    secciones[i].style.display="none";
+                    if (secciones[i].getAttribute("index") == idx) {
+                        secciones[i].style.display="flex";
+                    }
+                }
+            };
+        }
+    }
+    easyTabs();
 }
 
