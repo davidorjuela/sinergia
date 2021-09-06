@@ -119,5 +119,35 @@ END:VCALENDAR`;
         }
     }
     easyTabs();
+
+    function easyQuestions() {
+        var questions = document.querySelectorAll('.pregunta');
+        var answers = document.querySelectorAll('.respuesta');
+
+        for (t = 0; t < questions.length; t++) {
+            questions[t].setAttribute("index", t+1);
+            }
+
+        for (c = 0; c < answers.length; c++) {
+            answers[c].setAttribute("index", c+1);
+            }
+
+        for (i = 0; i < questions.length; i++) {
+            questions[i].onclick = function() {
+                var idx = this.getAttribute("index");
+                for (i = 0; i < answers.length; i++) {
+                    if (answers[i].getAttribute("index") == idx) {
+                        answers[i].clientHeight==0 ?
+                        answers[i].style.maxHeight="5000px" :
+                        answers[i].style.maxHeight="0" ;
+                    }
+                    else{
+                        answers[i].style.maxHeight="0" ;
+                    }
+                }
+            };
+        }
+    }
+    easyQuestions();
 }
 
