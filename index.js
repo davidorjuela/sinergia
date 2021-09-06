@@ -138,7 +138,7 @@ END:VCALENDAR`;
                 for (i = 0; i < answers.length; i++) {
                     if (answers[i].getAttribute("index") == idx) {
                         answers[i].clientHeight==0 ?
-                        answers[i].style.maxHeight="5000px" :
+                        answers[i].style.maxHeight="500px" :
                         answers[i].style.maxHeight="0" ;
                     }
                     else{
